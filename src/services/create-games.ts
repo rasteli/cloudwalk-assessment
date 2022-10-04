@@ -25,11 +25,12 @@ export class CreateGames {
         crlfDelay: Infinity
       })
       // Note: we use the crlfDelay option to recognize all instances of CR LF
-      // ('\r\n') in filePath as a single line break.
+      // ('\r\n') in filePath as a single line break
 
-      // Each line in filePath will be successively available here as "line".
+      // Each line in filePath will be successively available here as "line"
       rl.on("line", line => {
-        // If line does not include "InitGame", it means we have to start a new game creation process
+        // Lines including "InitGame" are delimiters for a new game
+        // Collects data from lines between other lines including "InitGame"
         if (!line.includes("InitGame")) {
           if (line.includes("Kill")) {
             // Example of kill line -> 21:07 Kill: 1022 2 22: <world> killed Isgalamido by MOD_TRIGGER_HURT
@@ -42,23 +43,23 @@ export class CreateGames {
             const killed = actors[1].split("by")[0].trim() // -> "Isgalamido"
             const means = actors[1].split("by")[1].trim() // -> "MOD_TRIGGER_HURT"
 
-            // If means is not in the killsByMeans object, add it with value 1
-            // else increment its value by 1
+            // If means is not in the killsByMeans object, adds it with value 1
+            // else increments its value by 1
             killsByMeans[means] = killsByMeans[means] ? killsByMeans[means] + 1 : 1
 
             // If the world killed the player or the player killed themselves, they lose a kill
             if (killer === "<world>" || killer === killed) {
-              // If player killed is not in the kills object, add it with value -1
-              // else decrement its value by 1
+              // If player killed is not in the kills object, adds it with value -1
+              // else decrements its value by 1
               kills[killed] = kills[killed] ? kills[killed] - 1 : -1
             } else {
-              // If killer is not in the kills object, add it with value 1
-              // else increment its value by 1
+              // If killer is not in the kills object, adds it with value 1
+              // else increments its value by 1
               kills[killer] = kills[killer] ? kills[killer] + 1 : 1
-              // Update player's ranking by their kill count
+              // Updates player's ranking by their kill count
               playerRanking[killer] = updatePlayerRank(playerRanking, killer, "kills")
             }
-            // Update player's ranking by their death count
+            // Updates player's ranking by their death count
             playerRanking[killed] = updatePlayerRank(playerRanking, killed, "deaths")
           }
 
@@ -71,13 +72,13 @@ export class CreateGames {
               playerRanking[player] = createPlayerRank()
             }
           }
-          // If it does inlcude "InitGame", a new game is properly created with the
-          // data parsed from the process above
+          // If line inlcudes "InitGame", it means we have reached a new game
+          // and we can create a new Game instance with the data collected from the previous game
         } else if (players.length > 0) {
           const game = new Game({ totalKills, players, kills, killsByMeans, playerRanking })
           games.push(game)
 
-          // Reset data so they don't get added to the next game
+          // Resets data so they don't get added to the next game
           kills = {}
           players = []
           totalKills = 0
