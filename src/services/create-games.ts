@@ -1,8 +1,8 @@
 import fs from "node:fs"
 import readline from "node:readline"
 
-import { Game, PlayerRanking, Kills } from "../entities/game"
-import { createPlayerRank, updatePlayerRank } from "../utils/rank-player"
+import { Game } from "../entities/game"
+import { getGamePropsByLine, clearGameProps } from "../utils/get-game-props"
 
 export class CreateGames {
   execute(filePath: string): Promise<Game[]> {
@@ -11,11 +11,7 @@ export class CreateGames {
         throw new Error(`File not found at ${filePath}`)
       }
 
-      let totalKills = 0
-      let kills: Kills = {}
-      let players: string[] = []
-      let killsByMeans: Kills = {}
-      let playerRanking: PlayerRanking = {}
+      let gameProps = clearGameProps()
 
       const games: Game[] = []
       const fileStream = fs.createReadStream(filePath)
@@ -29,61 +25,19 @@ export class CreateGames {
 
       // Each line in filePath will be successively available here as "line"
       rl.on("line", line => {
-        // Lines including "InitGame" are delimiters for a new game
-        // Collects data from lines between other lines including "InitGame"
+        // Lines including "InitGame" are delimiters for a new game,
+        // so if a line doesn't include "InitGame", it means it's between the ones that do
+        // (except for the outer not important ones)
         if (!line.includes("InitGame")) {
-          if (line.includes("Kill")) {
-            // Example of kill line -> 21:07 Kill: 1022 2 22: <world> killed Isgalamido by MOD_TRIGGER_HURT
-            totalKills++
-
-            const info = line.split(":")[3] // -> " <world> killed Isgalamido by MOD_TRIGGER_HURT"
-            const actors = info.split("killed") // -> [" <world> ", " Isgalamido by MOD_TRIGGER_HURT"]
-
-            const killer = actors[0].trim() // -> "<world>"
-            const killed = actors[1].split("by")[0].trim() // -> "Isgalamido"
-            const means = actors[1].split("by")[1].trim() // -> "MOD_TRIGGER_HURT"
-
-            // If means is not in the killsByMeans object, adds it with value 1
-            // else increments its value by 1
-            killsByMeans[means] = killsByMeans[means] ? killsByMeans[means] + 1 : 1
-
-            // If the world killed the player or the player killed themselves, they lose a kill
-            if (killer === "<world>" || killer === killed) {
-              // If player killed is not in the kills object, adds it with value -1
-              // else decrements its value by 1
-              kills[killed] = kills[killed] ? kills[killed] - 1 : -1
-            } else {
-              // If killer is not in the kills object, adds it with value 1
-              // else increments its value by 1
-              kills[killer] = kills[killer] ? kills[killer] + 1 : 1
-              // Updates player's ranking by their kill count
-              playerRanking[killer] = updatePlayerRank(playerRanking, killer, "kills")
-            }
-            // Updates player's ranking by their death count
-            playerRanking[killed] = updatePlayerRank(playerRanking, killed, "deaths")
-          }
-
-          if (line.includes("ClientUserinfoChanged")) {
-            // Example of client line -> 20:54 ClientUserinfoChanged: 2 n\Isgalamido\t\0\model\uriel/zael\hmodel\uriel
-            const player = line.split("\\")[1] // -> "Isgalamido"
-
-            if (!players.includes(player)) {
-              players.push(player)
-              playerRanking[player] = createPlayerRank()
-            }
-          }
+          // Collects data from lines between other lines including "InitGame"
+          gameProps = getGamePropsByLine(line)
+        } else if (gameProps.players.length > 0) {
           // If line inlcudes "InitGame", it means we have reached a new game
           // and we can create a new Game instance with the data collected from the previous game
-        } else if (players.length > 0) {
-          const game = new Game({ totalKills, players, kills, killsByMeans, playerRanking })
+          const game = new Game(gameProps)
           games.push(game)
-
           // Resets data so they don't get added to the next game
-          kills = {}
-          players = []
-          totalKills = 0
-          killsByMeans = {}
-          playerRanking = {}
+          gameProps = clearGameProps()
         }
       })
 

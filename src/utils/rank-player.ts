@@ -12,6 +12,6 @@ export function createPlayerRank() {
 export function updatePlayerRank(playerRanking: PlayerRanking, player: string, prop: Prop) {
   return {
     ...playerRanking[player],
-    [prop]: playerRanking[player][prop] + 1
+    [prop]: playerRanking[player] ? playerRanking[player][prop] + 1 : 1
   }
 }
