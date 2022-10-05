@@ -1,5 +1,5 @@
 import { PlayerRanking, Kills } from "../entities/game"
-import { updatePlayerRank } from "./update-player-rank"
+import { increasePlayerKillsOrDeathsByOne } from "./increase-player-kills-or-deaths-by-one"
 
 let totalKills = 0
 let kills: Kills = {}
@@ -49,10 +49,10 @@ export function getGamePropsByLine(line: string) {
       // else increments its value by 1
       kills[killer] = kills[killer] ? kills[killer] + 1 : 1
       // Updates player's ranking by their kill count
-      playerRanking[killer] = updatePlayerRank(playerRanking, killer, "kills")
+      playerRanking[killer] = increasePlayerKillsOrDeathsByOne(playerRanking, killer, "kills")
     }
     // Updates player's ranking by their death count
-    playerRanking[killed] = updatePlayerRank(playerRanking, killed, "deaths")
+    playerRanking[killed] = increasePlayerKillsOrDeathsByOne(playerRanking, killed, "deaths")
   }
 
   if (line.includes("ClientUserinfoChanged")) {

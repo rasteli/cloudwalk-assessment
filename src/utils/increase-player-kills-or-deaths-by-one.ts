@@ -2,7 +2,11 @@ import { PlayerRanking } from "../entities/game"
 
 type Prop = "kills" | "deaths"
 
-export function updatePlayerRank(playerRanking: PlayerRanking, player: string, prop: Prop) {
+export function increasePlayerKillsOrDeathsByOne(
+  playerRanking: PlayerRanking,
+  player: string,
+  prop: Prop
+) {
   const playerInRanking = playerRanking[player]
 
   return {
