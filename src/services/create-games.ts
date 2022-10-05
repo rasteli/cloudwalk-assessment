@@ -4,8 +4,12 @@ import readline from "node:readline"
 import { Game } from "../entities/game"
 import { getGamePropsByLine, clearGameProps } from "../utils/get-game-props"
 
+interface CreateGamesResponse {
+  [key: string]: Game
+}
+
 export class CreateGames {
-  execute(filePath: string): Promise<Game[]> {
+  execute(filePath: string): Promise<CreateGamesResponse> {
     return new Promise(resolve => {
       if (!fs.existsSync(filePath)) {
         throw new Error(`File not found at ${filePath}`)
@@ -13,7 +17,7 @@ export class CreateGames {
 
       let gameProps = clearGameProps()
 
-      const games: Game[] = []
+      const games: CreateGamesResponse = {}
       const fileStream = fs.createReadStream(filePath)
 
       const rl = readline.createInterface({
@@ -33,9 +37,15 @@ export class CreateGames {
           gameProps = getGamePropsByLine(line)
         } else if (gameProps.players.length > 0) {
           // If line inlcudes "InitGame", it means we have reached a new game
-          // and we can create a new Game instance with the data collected from the previous game
+          // and we can create a new Game instance with the data collected from the previous game.
+          // We also need to check if the gameProps.players array is not empty, because if it is,
+          // there's no game to be created.
           const game = new Game(gameProps)
-          games.push(game)
+
+          const gamesLength = Object.entries(games).length
+          const gameKey = "game_" + (gamesLength + 1)
+
+          games[gameKey] = game
           // Resets data so they don't get added to the next game
           gameProps = clearGameProps()
         }

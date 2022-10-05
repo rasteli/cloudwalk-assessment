@@ -1,5 +1,5 @@
-[
-  {
+{
+  "game_1": {
     "totalKills": 0,
     "players": ["Isgalamido"],
     "kills": {
@@ -13,7 +13,7 @@
       }
     }
   },
-  {
+  "game_2": {
     "totalKills": 11,
     "players": ["Isgalamido", "Dono da Bola", "Mocinha"],
     "kills": {
@@ -41,7 +41,7 @@
       }
     }
   },
-  {
+  "game_3": {
     "totalKills": 4,
     "players": ["Dono da Bola", "Mocinha", "Isgalamido", "Zeh"],
     "kills": {
@@ -74,7 +74,7 @@
       }
     }
   },
-  {
+  "game_4": {
     "totalKills": 105,
     "players": ["Dono da Bola", "Isgalamido", "Zeh", "Assasinu Credi"],
     "kills": {
@@ -111,7 +111,7 @@
       }
     }
   },
-  {
+  "game_5": {
     "totalKills": 14,
     "players": ["Dono da Bola", "Isgalamido", "Zeh", "Assasinu Credi"],
     "kills": {
@@ -145,7 +145,7 @@
       }
     }
   },
-  {
+  "game_6": {
     "totalKills": 29,
     "players": [
       "Fasano Again",
@@ -217,7 +217,7 @@
       }
     }
   },
-  {
+  "game_7": {
     "totalKills": 130,
     "players": [
       "Oootsimo",
@@ -283,7 +283,7 @@
       }
     }
   },
-  {
+  "game_8": {
     "totalKills": 89,
     "players": ["Oootsimo", "Isgalamido", "Zeh", "Dono da Bola", "Mal", "Assasinu Credi"],
     "kills": {
@@ -330,7 +330,7 @@
       }
     }
   },
-  {
+  "game_9": {
     "totalKills": 67,
     "players": [
       "Oootsimo",
@@ -396,7 +396,7 @@
       }
     }
   },
-  {
+  "game_10": {
     "totalKills": 60,
     "players": [
       "Oootsimo",
@@ -458,7 +458,7 @@
       }
     }
   },
-  {
+  "game_11": {
     "totalKills": 20,
     "players": [
       "Dono da Bola",
@@ -523,7 +523,7 @@
       }
     }
   },
-  {
+  "game_12": {
     "totalKills": 160,
     "players": [
       "Isgalamido",
@@ -584,7 +584,7 @@
       }
     }
   },
-  {
+  "game_13": {
     "totalKills": 6,
     "players": [
       "Isgalamido",
@@ -642,7 +642,7 @@
       }
     }
   },
-  {
+  "game_14": {
     "totalKills": 122,
     "players": [
       "Isgalamido",
@@ -703,7 +703,7 @@
       }
     }
   },
-  {
+  "game_15": {
     "totalKills": 3,
     "players": ["Zeh", "Assasinu Credi", "Dono da Bola", "Fasano Again", "Isgalamido", "Oootsimo"],
     "kills": {
@@ -744,7 +744,7 @@
       }
     }
   },
-  {
+  "game_16": {
     "totalKills": 0,
     "players": ["Dono da Bola", "Oootsimo", "Isgalamido", "Assasinu Credi", "Zeh"],
     "kills": {
@@ -778,7 +778,7 @@
       }
     }
   },
-  {
+  "game_17": {
     "totalKills": 13,
     "players": [
       "Dono da Bola",
@@ -835,7 +835,7 @@
       }
     }
   },
-  {
+  "game_18": {
     "totalKills": 7,
     "players": ["Dono da Bola", "Oootsimo", "Isgalamido", "Assasinu Credi", "Zeh", "Mal"],
     "kills": {
@@ -879,7 +879,7 @@
       }
     }
   },
-  {
+  "game_19": {
     "totalKills": 95,
     "players": ["Isgalamido", "Oootsimo", "Dono da Bola", "Assasinu Credi", "Zeh", "Mal"],
     "kills": {
@@ -926,7 +926,7 @@
       }
     }
   },
-  {
+  "game_20": {
     "totalKills": 3,
     "players": ["Isgalamido", "Oootsimo", "Dono da Bola", "Assasinu Credi", "Zeh", "Mal"],
     "kills": {
@@ -968,4 +968,4 @@
       }
     }
   }
-]
+}

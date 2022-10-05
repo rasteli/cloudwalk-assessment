@@ -8,9 +8,7 @@ describe("Create multiple games", () => {
     const sut = new CreateGames()
     const games = await sut.execute("qgames.log")
 
-    expect(games).toBeInstanceOf(Array)
-
-    games.forEach(game => {
+    Object.entries(games).forEach(([, game]) => {
       expect(game).toBeInstanceOf(Game)
     })
   })
