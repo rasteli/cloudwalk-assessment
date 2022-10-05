@@ -1,3 +1,5 @@
+import { getArrayFromObjectValues } from "../utils/get-array-from-object-values"
+
 export interface Kills {
   [key: string]: number
 }
@@ -32,11 +34,11 @@ export class Game {
     let killsByMeansSum = 0
     let playerDeathsSum = 0
 
-    Object.entries(playerRanking).forEach(([, value]) => {
+    getArrayFromObjectValues(playerRanking).forEach(value => {
       playerDeathsSum += value.deaths
     })
 
-    Object.entries(killsByMeans).forEach(([, value]) => {
+    getArrayFromObjectValues(killsByMeans).forEach(value => {
       killsByMeansSum += value
     })
 

@@ -3,6 +3,7 @@ import readline from "node:readline"
 
 import { Game } from "../entities/game"
 import { getGamePropsByLine, clearGameProps } from "../utils/get-game-props"
+import { getArrayFromObjectValues } from "../utils/get-array-from-object-values"
 
 interface CreateGamesResponse {
   [key: string]: Game
@@ -42,7 +43,7 @@ export class CreateGames {
           // there's no game to be created.
           const game = new Game(gameProps)
 
-          const gamesLength = Object.entries(games).length
+          const gamesLength = getArrayFromObjectValues(games).length
           const gameKey = "game_" + (gamesLength + 1)
 
           games[gameKey] = game
