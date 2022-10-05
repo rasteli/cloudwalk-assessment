@@ -44,6 +44,9 @@ yarn dev
 npm run dev
 ```
 
+When either of the above commands is run, an array containing all game instances will be printed to the console.
+A file called [games.json](https://github.com/rasteli/cloudwalk-assessment/blob/master/games.json) at the project root folder will also be overwritten (if it exists, or else it will be created) with a [JSON.stringified](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) version of this array.
+
 ## Testing
 
 To start testing with vitest, simply run:
