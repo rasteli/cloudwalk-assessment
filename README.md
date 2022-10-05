@@ -10,7 +10,7 @@ This projects was built using [TypeScript](https://www.typescriptlang.org/) and 
 
 Clone this repository:
 
-```console
+```
 git clone https://github.com/rasteli/cloudwalk-assessment.git
 ```
 
@@ -20,13 +20,13 @@ Go to the project root folder and download its dependencies:
 
 **Yarn**
 
-```console
+```
 yarn
 ```
 
 **NPM**
 
-```console
+```
 npm install
 ```
 
@@ -34,13 +34,13 @@ Once that is done, start the project:
 
 **Yarn**
 
-```console
+```
 yarn dev
 ```
 
 **NPM**
 
-```console
+```
 npm run dev
 ```
 
@@ -53,12 +53,12 @@ To start testing with vitest, simply run:
 
 **Yarn**
 
-```console
+```
 yarn test
 ```
 
 **NPM**
 
-```console
+```
 npm run test
 ```
