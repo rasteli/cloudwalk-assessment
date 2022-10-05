@@ -1,5 +1,5 @@
 import { PlayerRanking, Kills } from "../entities/game"
-import { createPlayerRank, updatePlayerRank } from "./rank-player"
+import { updatePlayerRank } from "./update-player-rank"
 
 let totalKills = 0
 let kills: Kills = {}
@@ -61,7 +61,10 @@ export function getGamePropsByLine(line: string) {
 
     if (!players.includes(player)) {
       players.push(player)
-      playerRanking[player] = createPlayerRank()
+      // Creates player's kill score
+      kills[player] = 0
+      // Creates player's ranking
+      playerRanking[player] = { kills: 0, deaths: 0 }
     }
   }
 
