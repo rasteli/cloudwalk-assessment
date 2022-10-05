@@ -10,7 +10,7 @@ async function processLineByLine(filePath: string) {
 
 ;(async () => {
   const games = await processLineByLine("qgames.log")
-  const gamesToJSON = JSON.stringify(games)
+  const gamesToJSON = JSON.stringify(games, null, 2)
 
   console.log(util.inspect(games, false, null, true))
   fs.writeFileSync("games.json", gamesToJSON)
