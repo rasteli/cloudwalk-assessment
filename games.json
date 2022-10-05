@@ -1,8 +1,8 @@
 [
   {
-    "kills": {},
-    "players": ["Isgalamido"],
     "totalKills": 0,
+    "players": ["Isgalamido"],
+    "kills": {},
     "killsByMeans": {},
     "playerRanking": {
       "Isgalamido": {
@@ -12,11 +12,11 @@
     }
   },
   {
+    "totalKills": 11,
+    "players": ["Isgalamido", "Dono da Bola", "Mocinha"],
     "kills": {
       "Isgalamido": -9
     },
-    "players": ["Isgalamido", "Dono da Bola", "Mocinha"],
-    "totalKills": 11,
     "killsByMeans": {
       "MOD_TRIGGER_HURT": 7,
       "MOD_ROCKET_SPLASH": 3,
@@ -38,13 +38,13 @@
     }
   },
   {
+    "totalKills": 4,
+    "players": ["Dono da Bola", "Mocinha", "Isgalamido", "Zeh"],
     "kills": {
       "Isgalamido": 1,
       "Zeh": -2,
       "Dono da Bola": -1
     },
-    "players": ["Dono da Bola", "Mocinha", "Isgalamido", "Zeh"],
-    "totalKills": 4,
     "killsByMeans": {
       "MOD_ROCKET": 1,
       "MOD_TRIGGER_HURT": 2,
@@ -70,14 +70,14 @@
     }
   },
   {
+    "totalKills": 105,
+    "players": ["Dono da Bola", "Isgalamido", "Zeh", "Assasinu Credi"],
     "kills": {
       "Isgalamido": 19,
       "Dono da Bola": 5,
       "Zeh": 20,
       "Assasinu Credi": 11
     },
-    "players": ["Dono da Bola", "Isgalamido", "Zeh", "Assasinu Credi"],
-    "totalKills": 105,
     "killsByMeans": {
       "MOD_TRIGGER_HURT": 9,
       "MOD_FALLING": 11,
@@ -107,13 +107,13 @@
     }
   },
   {
+    "totalKills": 14,
+    "players": ["Dono da Bola", "Isgalamido", "Zeh", "Assasinu Credi"],
     "kills": {
       "Isgalamido": 2,
       "Assasinu Credi": -3,
       "Zeh": 1
     },
-    "players": ["Dono da Bola", "Isgalamido", "Zeh", "Assasinu Credi"],
-    "totalKills": 14,
     "killsByMeans": {
       "MOD_ROCKET": 4,
       "MOD_ROCKET_SPLASH": 4,
@@ -140,14 +140,7 @@
     }
   },
   {
-    "kills": {
-      "Oootsimo": 8,
-      "Isgalamido": 3,
-      "Zeh": 7,
-      "Dono da Bola": 2,
-      "Maluquinho": 0,
-      "Assasinu Credi": 1
-    },
+    "totalKills": 29,
     "players": [
       "Fasano Again",
       "Oootsimo",
@@ -159,7 +152,14 @@
       "Assasinu Credi",
       "Mal"
     ],
-    "totalKills": 29,
+    "kills": {
+      "Oootsimo": 8,
+      "Isgalamido": 3,
+      "Zeh": 7,
+      "Dono da Bola": 2,
+      "Maluquinho": 0,
+      "Assasinu Credi": 1
+    },
     "killsByMeans": {
       "MOD_ROCKET": 5,
       "MOD_RAILGUN": 2,
@@ -209,14 +209,7 @@
     }
   },
   {
-    "kills": {
-      "Zeh": 7,
-      "Dono da Bola": 8,
-      "Assasinu Credi": 16,
-      "Oootsimo": 20,
-      "Mal": -3,
-      "Isgalamido": 12
-    },
+    "totalKills": 130,
     "players": [
       "Oootsimo",
       "Isgalamido",
@@ -227,7 +220,14 @@
       "Chessus!",
       "Chessus"
     ],
-    "totalKills": 130,
+    "kills": {
+      "Zeh": 7,
+      "Dono da Bola": 8,
+      "Assasinu Credi": 16,
+      "Oootsimo": 20,
+      "Mal": -3,
+      "Isgalamido": 12
+    },
     "killsByMeans": {
       "MOD_FALLING": 7,
       "MOD_TRIGGER_HURT": 20,
@@ -273,6 +273,8 @@
     }
   },
   {
+    "totalKills": 89,
+    "players": ["Oootsimo", "Isgalamido", "Zeh", "Dono da Bola", "Mal", "Assasinu Credi"],
     "kills": {
       "Oootsimo": 14,
       "Isgalamido": 20,
@@ -281,8 +283,6 @@
       "Dono da Bola": -1,
       "Mal": -4
     },
-    "players": ["Oootsimo", "Isgalamido", "Zeh", "Dono da Bola", "Mal", "Assasinu Credi"],
-    "totalKills": 89,
     "killsByMeans": {
       "MOD_TRIGGER_HURT": 9,
       "MOD_ROCKET": 18,
@@ -320,15 +320,7 @@
     }
   },
   {
-    "kills": {
-      "Assasinu Credi": 4,
-      "Oootsimo": 7,
-      "Mal": 1,
-      "Dono da Bola": 0,
-      "Zeh": 12,
-      "Isgalamido": 1,
-      "Chessus": 8
-    },
+    "totalKills": 67,
     "players": [
       "Oootsimo",
       "Isgalamido",
@@ -339,7 +331,15 @@
       "Chessus!",
       "Chessus"
     ],
-    "totalKills": 67,
+    "kills": {
+      "Assasinu Credi": 4,
+      "Oootsimo": 7,
+      "Mal": 1,
+      "Dono da Bola": 0,
+      "Zeh": 12,
+      "Isgalamido": 1,
+      "Chessus": 8
+    },
     "killsByMeans": {
       "MOD_TRIGGER_HURT": 8,
       "MOD_ROCKET_SPLASH": 25,
@@ -385,15 +385,7 @@
     }
   },
   {
-    "kills": {
-      "Mal": 1,
-      "Assasinu Credi": 3,
-      "Dono da Bola": 3,
-      "Chessus": 5,
-      "Zeh": 7,
-      "Oootsimo": -1,
-      "Isgalamido": 4
-    },
+    "totalKills": 60,
     "players": [
       "Oootsimo",
       "Dono da Bola",
@@ -403,7 +395,15 @@
       "Assasinu Credi",
       "Isgalamido"
     ],
-    "totalKills": 60,
+    "kills": {
+      "Mal": 1,
+      "Assasinu Credi": 3,
+      "Dono da Bola": 3,
+      "Chessus": 5,
+      "Zeh": 7,
+      "Oootsimo": -1,
+      "Isgalamido": 4
+    },
     "killsByMeans": {
       "MOD_TELEFRAG": 25,
       "MOD_TRIGGER_HURT": 17,
@@ -447,12 +447,7 @@
     }
   },
   {
-    "kills": {
-      "Dono da Bola": -2,
-      "Isgalamido": 3,
-      "Oootsimo": 4,
-      "Assasinu Credi": -3
-    },
+    "totalKills": 20,
     "players": [
       "Dono da Bola",
       "Isgalamido",
@@ -463,7 +458,12 @@
       "UnnamedPlayer",
       "Mal"
     ],
-    "totalKills": 20,
+    "kills": {
+      "Dono da Bola": -2,
+      "Isgalamido": 3,
+      "Oootsimo": 4,
+      "Assasinu Credi": -3
+    },
     "killsByMeans": {
       "MOD_TRIGGER_HURT": 7,
       "MOD_CRUSH": 1,
@@ -508,15 +508,7 @@
     }
   },
   {
-    "kills": {
-      "Dono da Bola": 3,
-      "Assasinu Credi": 16,
-      "Mal": -8,
-      "Zeh": 9,
-      "Chessus": 11,
-      "Isgalamido": 22,
-      "Oootsimo": 11
-    },
+    "totalKills": 160,
     "players": [
       "Isgalamido",
       "Dono da Bola",
@@ -526,7 +518,15 @@
       "Assasinu Credi",
       "Mal"
     ],
-    "totalKills": 160,
+    "kills": {
+      "Dono da Bola": 3,
+      "Assasinu Credi": 16,
+      "Mal": -8,
+      "Zeh": 9,
+      "Chessus": 11,
+      "Isgalamido": 22,
+      "Oootsimo": 11
+    },
     "killsByMeans": {
       "MOD_TRIGGER_HURT": 37,
       "MOD_RAILGUN": 38,
@@ -569,12 +569,7 @@
     }
   },
   {
-    "kills": {
-      "Isgalamido": -1,
-      "Oootsimo": 0,
-      "Dono da Bola": -1,
-      "Zeh": 2
-    },
+    "totalKills": 6,
     "players": [
       "Isgalamido",
       "Dono da Bola",
@@ -584,7 +579,12 @@
       "Assasinu Credi",
       "Mal"
     ],
-    "totalKills": 6,
+    "kills": {
+      "Isgalamido": -1,
+      "Oootsimo": 0,
+      "Dono da Bola": -1,
+      "Zeh": 2
+    },
     "killsByMeans": {
       "MOD_TRIGGER_HURT": 2,
       "MOD_ROCKET": 1,
@@ -624,15 +624,7 @@
     }
   },
   {
-    "kills": {
-      "Isgalamido": 22,
-      "Chessus": 7,
-      "Mal": -8,
-      "Oootsimo": 9,
-      "Assasinu Credi": -1,
-      "Dono da Bola": 0,
-      "Zeh": 3
-    },
+    "totalKills": 122,
     "players": [
       "Isgalamido",
       "Dono da Bola",
@@ -642,7 +634,15 @@
       "Assasinu Credi",
       "Mal"
     ],
-    "totalKills": 122,
+    "kills": {
+      "Isgalamido": 22,
+      "Chessus": 7,
+      "Mal": -8,
+      "Oootsimo": 9,
+      "Assasinu Credi": -1,
+      "Dono da Bola": 0,
+      "Zeh": 3
+    },
     "killsByMeans": {
       "MOD_RAILGUN": 20,
       "MOD_TRIGGER_HURT": 31,
@@ -685,11 +685,11 @@
     }
   },
   {
+    "totalKills": 3,
+    "players": ["Zeh", "Assasinu Credi", "Dono da Bola", "Fasano Again", "Isgalamido", "Oootsimo"],
     "kills": {
       "Zeh": -3
     },
-    "players": ["Zeh", "Assasinu Credi", "Dono da Bola", "Fasano Again", "Isgalamido", "Oootsimo"],
-    "totalKills": 3,
     "killsByMeans": {
       "MOD_TRIGGER_HURT": 3
     },
@@ -721,9 +721,9 @@
     }
   },
   {
-    "kills": {},
-    "players": ["Dono da Bola", "Oootsimo", "Isgalamido", "Assasinu Credi", "Zeh"],
     "totalKills": 0,
+    "players": ["Dono da Bola", "Oootsimo", "Isgalamido", "Assasinu Credi", "Zeh"],
+    "kills": {},
     "killsByMeans": {},
     "playerRanking": {
       "Dono da Bola": {
@@ -749,14 +749,7 @@
     }
   },
   {
-    "kills": {
-      "Dono da Bola": -2,
-      "Zeh": 0,
-      "Assasinu Credi": -3,
-      "Oootsimo": -1,
-      "Isgalamido": 0,
-      "Mal": -1
-    },
+    "totalKills": 13,
     "players": [
       "Dono da Bola",
       "Oootsimo",
@@ -766,7 +759,14 @@
       "UnnamedPlayer",
       "Mal"
     ],
-    "totalKills": 13,
+    "kills": {
+      "Dono da Bola": -2,
+      "Zeh": 0,
+      "Assasinu Credi": -3,
+      "Oootsimo": -1,
+      "Isgalamido": 0,
+      "Mal": -1
+    },
     "killsByMeans": {
       "MOD_FALLING": 3,
       "MOD_TRIGGER_HURT": 6,
@@ -805,6 +805,8 @@
     }
   },
   {
+    "totalKills": 7,
+    "players": ["Dono da Bola", "Oootsimo", "Isgalamido", "Assasinu Credi", "Zeh", "Mal"],
     "kills": {
       "Zeh": 2,
       "Isgalamido": 1,
@@ -812,8 +814,6 @@
       "Dono da Bola": -1,
       "Mal": -1
     },
-    "players": ["Dono da Bola", "Oootsimo", "Isgalamido", "Assasinu Credi", "Zeh", "Mal"],
-    "totalKills": 7,
     "killsByMeans": {
       "MOD_ROCKET_SPLASH": 4,
       "MOD_ROCKET": 1,
@@ -848,6 +848,8 @@
     }
   },
   {
+    "totalKills": 95,
+    "players": ["Isgalamido", "Oootsimo", "Dono da Bola", "Assasinu Credi", "Zeh", "Mal"],
     "kills": {
       "Mal": 2,
       "Zeh": 20,
@@ -856,8 +858,6 @@
       "Dono da Bola": 10,
       "Assasinu Credi": 7
     },
-    "players": ["Isgalamido", "Oootsimo", "Dono da Bola", "Assasinu Credi", "Zeh", "Mal"],
-    "totalKills": 95,
     "killsByMeans": {
       "MOD_TRIGGER_HURT": 12,
       "MOD_ROCKET": 27,
@@ -895,12 +895,12 @@
     }
   },
   {
+    "totalKills": 3,
+    "players": ["Isgalamido", "Oootsimo", "Dono da Bola", "Assasinu Credi", "Zeh", "Mal"],
     "kills": {
       "Dono da Bola": 0,
       "Oootsimo": 1
     },
-    "players": ["Isgalamido", "Oootsimo", "Dono da Bola", "Assasinu Credi", "Zeh", "Mal"],
-    "totalKills": 3,
     "killsByMeans": {
       "MOD_ROCKET_SPLASH": 2,
       "MOD_ROCKET": 1

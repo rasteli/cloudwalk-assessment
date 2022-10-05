@@ -1,15 +1,9 @@
 import fs from "node:fs"
 import util from "node:util"
-import { CreateGames } from "./services/create-games"
 
-async function processLineByLine(filePath: string) {
-  const service = new CreateGames()
-  const games = await service.execute(filePath)
-  return games
-}
-
+import { CreateGamesController } from "./controllers/create-games-controller"
 ;(async () => {
-  const games = await processLineByLine("qgames.log")
+  const games = await new CreateGamesController().handle("qgames.log")
   const gamesToJSON = JSON.stringify(games, null, 2)
 
   console.log(util.inspect(games, false, null, true))

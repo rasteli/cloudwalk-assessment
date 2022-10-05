@@ -8,8 +8,8 @@ describe("Create a single game", () => {
 
     const kills = {
       Isgalamido: 0,
-      "Dono da Bola": -1,
-      Zeh: 0
+      "Dono da Bola": 0,
+      Zeh: -1
     }
 
     const killsByMeans = {
@@ -55,25 +55,12 @@ describe("Create a single game", () => {
   })
 
   it("should not be able to create a game with no players", () => {
-    const totalKills = 2
+    const totalKills = 0
     const players: string[] = []
 
-    const kills = {
-      Isgalamido: 0,
-      "Dono da Bola": -1,
-      Zeh: 0
-    }
-
-    const killsByMeans = {
-      MOD_ROCKET_SPLASH: 1,
-      MOD_TRIGGER_HURT: 1
-    }
-
-    const playerRanking = {
-      Isgalamido: { kills: 0, deaths: 0 },
-      "Dono da Bola": { kills: 0, deaths: 1 },
-      Zeh: { kills: 1, deaths: 1 }
-    }
+    const kills = {}
+    const killsByMeans = {}
+    const playerRanking = {}
 
     expect(() => {
       return new Game({ totalKills, playerRanking, kills, killsByMeans, players })

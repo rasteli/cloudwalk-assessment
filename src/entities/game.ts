@@ -25,28 +25,28 @@ export class Game {
   private playerRanking: PlayerRanking
 
   constructor({ totalKills, playerRanking, players, kills, killsByMeans }: GameProps) {
+    if (players.length === 0) {
+      throw new Error("Players array must not be empty")
+    }
+
     let killsByMeansSum = 0
-    let rankingDeathsSum = 0
+    let playerDeathsSum = 0
 
     Object.entries(playerRanking).forEach(([, value]) => {
-      rankingDeathsSum += value.deaths
+      playerDeathsSum += value.deaths
     })
 
     Object.entries(killsByMeans).forEach(([, value]) => {
       killsByMeansSum += value
     })
 
-    if (totalKills !== killsByMeansSum || totalKills !== rankingDeathsSum) {
+    if (totalKills !== killsByMeansSum || totalKills !== playerDeathsSum) {
       throw new Error("Total kills must be equal to kills by means and player deaths")
     }
 
-    if (players.length === 0) {
-      throw new Error("Players array must not be empty")
-    }
-
-    this.kills = kills
-    this.players = players
     this.totalKills = totalKills
+    this.players = players
+    this.kills = kills
     this.killsByMeans = killsByMeans
     this.playerRanking = playerRanking
   }
