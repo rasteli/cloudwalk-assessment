@@ -4,7 +4,7 @@ This project was created for a position at [CloudWalk, Inc](https://www.cloudwal
 
 ## Techs
 
-This projects was built using [TypeScript](https://www.typescriptlang.org/) and [Node.js](https://nodejs.org/en/) as a runtime. It also uses [vitest](https://vitest.dev/) as a test framework.
+This project was built using [TypeScript](https://www.typescriptlang.org/) and [Node.js](https://nodejs.org/en/) as a runtime. It also uses [vitest](https://vitest.dev/) as a test framework.
 
 ## Running the project
 
