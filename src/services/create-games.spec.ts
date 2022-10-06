@@ -10,7 +10,8 @@ describe("Create multiple games", () => {
     const games = await sut.execute("qgames.log")
     const gamesArray = getArrayFromObjectValues(games)
 
-    expect(gamesArray.length).toBeGreaterThan(0)
+    // 21 is the number of lines initializing a new game in qgames.log
+    expect(gamesArray.length).toEqual(21)
 
     gamesArray.forEach(game => {
       expect(game).toBeInstanceOf(Game)

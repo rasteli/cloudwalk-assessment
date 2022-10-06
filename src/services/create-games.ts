@@ -30,15 +30,19 @@ export class CreateGames {
 
       // Each line in filePath will be successively available here as "line"
       rl.on("line", line => {
-        // Lines including "InitGame" are delimiters for a new game,
-        // so if a line doesn't include "InitGame", it means it's between the ones that do
-        // (except for the outer not important ones)
-        if (!line.includes("InitGame")) {
-          // Collects data from lines between other lines including "InitGame"
+        if (!line.includes("ShutdownGame")) {
+          // Collects data from lines of a single game
           gameProps = getGamePropsByLine(line)
-        } else if (gameProps.players.length > 0) {
-          // If line inlcudes "InitGame", it means we have reached a new game
-          // and we can create a new Game instance with the data collected from the previous game.
+        }
+
+        // Checking only if line includes or not "ShutdownGame" is not enough, because there is
+        // at least one "InitGame" line with no corresponding "ShutdownGame" line
+        if (
+          (line.includes("InitGame") || line.includes("ShutdownGame")) &&
+          gameProps.players.length > 0
+        ) {
+          // If line inlcudes "InitGame" or "ShutdownGame", we can create a new Game instance with
+          // the data collected from the previous iteration.
           // We also need to check if the gameProps.players array is not empty, because if it is,
           // there's no game to be created.
           const game = new Game(gameProps)

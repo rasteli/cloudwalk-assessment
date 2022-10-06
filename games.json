@@ -967,5 +967,52 @@
         "deaths": 0
       }
     }
+  },
+  "game_21": {
+    "totalKills": 131,
+    "players": ["Isgalamido", "Oootsimo", "Dono da Bola", "Assasinu Credi", "Zeh", "Mal"],
+    "kills": {
+      "Isgalamido": 17,
+      "Oootsimo": 20,
+      "Dono da Bola": 10,
+      "Assasinu Credi": 13,
+      "Zeh": 19,
+      "Mal": 6
+    },
+    "killsByMeans": {
+      "MOD_ROCKET": 37,
+      "MOD_TRIGGER_HURT": 14,
+      "MOD_RAILGUN": 9,
+      "MOD_ROCKET_SPLASH": 60,
+      "MOD_MACHINEGUN": 4,
+      "MOD_SHOTGUN": 4,
+      "MOD_FALLING": 3
+    },
+    "playerRanking": {
+      "Isgalamido": {
+        "kills": 19,
+        "deaths": 19
+      },
+      "Oootsimo": {
+        "kills": 23,
+        "deaths": 18
+      },
+      "Dono da Bola": {
+        "kills": 14,
+        "deaths": 19
+      },
+      "Assasinu Credi": {
+        "kills": 19,
+        "deaths": 30
+      },
+      "Zeh": {
+        "kills": 21,
+        "deaths": 15
+      },
+      "Mal": {
+        "kills": 12,
+        "deaths": 30
+      }
+    }
   }
 }
